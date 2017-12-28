@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {UpperCaseService} from './upper-case.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  showCards = true;
+
+  constructor(private upperCaseService: UpperCaseService) {
+  }
+
+  toUpperCase(value) {
+    this.upperCaseService.toToUpperCase(value);
+  }
+
+  closeCards() {
+    this.showCards = false;
+  }
 }
