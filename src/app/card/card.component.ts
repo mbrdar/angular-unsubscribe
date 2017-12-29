@@ -7,7 +7,7 @@ import {UpperCaseService} from '../upper-case.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  name = 'Regular component';
+  name = 'No unsubscribe component';
   message: string;
 
   constructor(private upperCaseService: UpperCaseService) { }
